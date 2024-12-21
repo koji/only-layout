@@ -3,6 +3,8 @@ import * as Types from './types'
 
 import type { CSSObject } from 'styled-components'
 
+type Text = string | number
+
 const COLOR_PROPS = ['color', 'backgroundColor', 'opacity'] as const
 
 const TYPOGRAPHY_PROPS = [
@@ -186,5 +188,6 @@ export const styleProps = (props: Types.StyleProps): CSSObject => ({
   ...transitionStyles(props),
 })
 
-export const isntStyleProp = (prop: string | React.ReactText): boolean =>
+export const isntStyleProp = (prop: string | Text): boolean =>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   !STYLE_PROPS.includes(prop as any)
