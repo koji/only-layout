@@ -1,3 +1,4 @@
+import type { ComponentType } from 'react'
 import type { StyledComponent, CSSProperties } from 'styled-components'
 
 export interface ColorProps {
@@ -115,6 +116,8 @@ export interface StyleProps
 }
 
 export type PrimitiveComponent<
-  Instance extends keyof JSX.IntrinsicElements | React.ComponentType<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  Instance extends keyof JSX.IntrinsicElements | ComponentType<any>,
   Props extends StyleProps = StyleProps,
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 > = StyledComponent<Instance, {}, Props>
