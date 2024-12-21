@@ -16,20 +16,17 @@
     "emitDeclarationOnly": true,
     "declaration": true,
     "declarationMap": true,
-    "declarationDir": "./types",
+    "declarationDir": "./dist/types",
     "jsx": "react-jsx",
     "typeRoots": ["node_modules/@types"]
   },
   "include": [
     "typings",
-    "src",
-    "**/*.ts",
-    "**/*.tsx",
-    "vite.config.mts",
+    "src/**/*",
     "src/vite-env.d.ts",
     "styled-components.d.ts",
     "vitest.setup.ts"
   ],
-  "exclude": ["node_modules", "**/*.stories.tsx"],
+  "exclude": ["node_modules", "**/*.stories.tsx", "dist", "vite.config.mts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -3,6 +3,8 @@ import { describe, expect, it } from 'vitest'
 import { Flex } from '../'
 import { DIRECTION_COLUMN, DIRECTION_ROW } from '../../styles'
 
+import type * as React from 'react'
+
 describe('Box', async () => {
   it('should render flex component with props - col case', async () => {
     render(
