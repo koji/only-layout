@@ -23,11 +23,10 @@
   "include": [
     "typings",
     "src/**/*",
-    "vite.config.mts",
     "src/vite-env.d.ts",
     "styled-components.d.ts",
     "vitest.setup.ts"
   ],
-  "exclude": ["node_modules", "**/*.stories.tsx", "dist"],
+  "exclude": ["node_modules", "**/*.stories.tsx", "dist", "vite.config.mts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
