@@ -8,6 +8,7 @@ export default [
   { languageOptions: { globals: globals.browser } },
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  { ignores: ['**/vite.config.mts', '**/vitest.setup.ts'] },
 ]
 
 // ToDo modify the following code
@@ -90,6 +91,6 @@ export default [
 //         "simple-import-sort/exports": "error",
 //         "@typescript-eslint/no-empty-function": "off",
 //         "react/no-unknown-property": "off",
-//         "react/no-unescaped-entities ": "off",
+//         "react/no-unescaped-entities": "off",
 //     },
 // }];
